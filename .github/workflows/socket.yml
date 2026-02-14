@@ -19,6 +19,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+
   socket-security:
     permissions:
       issues: write
@@ -35,6 +36,12 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Debug directory contents
+        run: |
+          echo "=== frontend directory ==="
+          ls -la $GITHUB_WORKSPACE/frontend/
+          echo "=== check for package.json ==="
+          test -f $GITHUB_WORKSPACE/frontend/package.json && echo "EXISTS" || echo "MISSING"    
       
       - name: Install Socket CLI
         run: pip install socketsecurity --upgrade

@@ -67,3 +67,4 @@ jobs:
             --workspace-name monorepo-frontend
             --scm github \
             --pr-number $PR_NUMBER
+            --enable-debug

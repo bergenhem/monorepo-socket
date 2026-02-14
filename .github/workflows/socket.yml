@@ -64,7 +64,7 @@ jobs:
           socketcli \
             --target-path $GITHUB_WORKSPACE \
             --sub-path frontend \
-            --workspace-name monorepo-frontend
+            --workspace-name monorepo-frontend \
             --scm github \
-            --pr-number $PR_NUMBER
+            --pr-number $PR_NUMBER \
             --enable-debug

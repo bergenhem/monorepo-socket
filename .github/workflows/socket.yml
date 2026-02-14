@@ -63,5 +63,7 @@ jobs:
           # - Changed files from git commit
           socketcli \
             --target-path $GITHUB_WORKSPACE \
+            --sub-path frontend \
+            --workspace-name monorepo-frontend
             --scm github \
             --pr-number $PR_NUMBER
